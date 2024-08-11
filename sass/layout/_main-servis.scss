@@ -1,0 +1,98 @@
+.principal2{
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    .tecnico{
+        z-index: 0;
+        position: relative;
+        bottom: 250px;
+        background-color: map-get($colores, color5 );
+        height: 310px;
+        width: 1065.9px;
+        left: 80%;
+    }
+    #imagen{
+        z-index: 1;
+        width: 1000px;
+        height: 500px;
+        position: relative;
+        padding-left: 50px;
+        bottom: 55px;
+        overflow: hidden;
+    }
+    .section{
+        height: 150px;
+    }
+    .contactanos{
+        z-index: 1;
+        position: relative;
+        padding-bottom: 55px;
+        font-family: 'Inter', Times, serif;
+        background-color: #000000;
+        height: 100px;
+        bottom: 150px;
+    }
+    .section2{
+        #tec{
+            display: flex;
+            @include main(relative, none, center, none); /* Alinea el texto al centro */
+            @include font(bolder);
+            padding: 20px;
+            top: 250px;
+            left: 50px;
+        }
+        #tec2{
+            display: flex; /* Alinea el texto al centro */
+            @include font(bold);
+            padding: 20px;
+            @include main(relative, pre-line, none, none);
+            top: 220px;
+            right: 70px;
+        }
+        #tec3{
+            display: flex; /* Alinea el texto al centro */
+            @include font(bold);
+            @include main(relative, pre-line, end, none);
+            padding: 20px;
+            top: 180px;
+            left: 200px;
+        }
+        #tec4{
+            display: flex; /* Alinea el texto al centro */
+            @include font(bold);
+            padding: 20px;
+            @include main(relative, pre-line, left, none);
+            top: 120px;
+            right: 70px;
+            white-space: pre-line;
+        }
+        .tec5{
+            display: flex;
+            text-align: center; /* Alinea el texto al centro */
+            @include font(bold);
+            padding: 20px;
+            @include main(relative, none, center, none);
+            color: map-get($colores, color4 );
+        }
+        .contactano2{
+            z-index: 9;
+            display: flex;
+            @include main(relative, none, center, none); /* Alinea el texto al centro */
+            @include font(bold);
+            padding: 20px;
+            position: relative;
+            top: 180px;
+            right: 345px;
+            color: map-get($colores, color4 );
+        }
+        .con2{
+            z-index: 5;
+            display: flex;
+            padding: 10px;
+            top: 175px;
+            right: 125px;
+            position: relative;        
+        }
+        
+    }
+}

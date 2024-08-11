@@ -1,0 +1,34 @@
+.principal{
+    width: 100%;
+    height: 100px;
+    
+    .titulo{
+        z-index: 0;
+        @include font(bold);
+        color: map-get($colores, color4 );
+        @include main(relative, pre-line, center, center);
+        font-size: 100px;
+        line-height: 125px;
+    }
+
+    .desarollo1{
+        z-index: 0;
+        display: flex;
+        @include font(bold);
+        color: map-get($colores, color4 );
+        @include main(relative, pre-line, center, center);
+        font-size: 15px;
+        top: 50px;
+    }
+
+    .desarollo2{
+        @extend .desarollo1;
+        @include font(lighter);
+        font-size: 35px;
+        line-height: 45px;
+        top: 50px;
+    }
+
+
+
+}

@@ -1,0 +1,47 @@
+@mixin column-position{
+    flex-direction: column;
+    position: relative;
+}
+
+@mixin font($weight)   {
+    font-weight: $weight;
+    font-family: 'Inter', Times, serif;
+}
+
+@mixin main($postiton ,$space ,$align, $justify){
+    position: $postiton;
+    white-space: $space;
+    text-align: $align;
+    justify-content: $justify;
+}
+@mixin grid{
+    z-index: 1;
+    display: grid;
+    width: 100vh;
+    height: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "mai"
+    "footer"
+}
+
+@mixin grid($cs, $ce, $rs, $re){
+    display: flex;
+    grid-column-start: $cs;
+    grid-column-end: $ce;
+    grid-row-start: $rs;
+    grid-row-end: $re;
+}
+
+@mixin a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', Times, serif;
+    font-size: 25px;
+    font-weight: 250;
+    margin: auto;
+    line-height: 35px;
+}

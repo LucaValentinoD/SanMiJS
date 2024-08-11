@@ -1,0 +1,604 @@
+@media (max-width:320px){
+
+    .Navegador {
+        z-index: 8;
+        display: flex;
+        font-family: 'Inter', Times, serif;
+        font-weight: 250;
+        background-color: #020262;
+        position: fixed;
+        width: 320px;
+        height: 100px;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .Navegador .links{
+        position: relative;
+        top: 10px;
+        font-size: 10.5px;
+        font-weight: 500;
+    }
+    
+    .Navegador .linked{
+        position: relative;
+        top: 30px;
+        font-weight: 500;
+        font-size: 10.5px;
+        line-height: 20px;
+    }
+    
+    
+    .Navegador .link{
+        position: relative;
+        font-size: 10.5px;
+        font-weight: 500;
+        line-height: 20px;
+        top: 15px;
+    }
+
+
+    main{
+        .tx5{
+        left: -15px;
+        font-size: 15px;
+    }
+    .insano{
+        width: 300px;
+        left: 0px;
+    }
+    }
+    .pie4{
+        .perfil{
+            width: 190px;
+            @include grid(1,7,none,none)
+        }
+        .fo-tx1{
+            @include grid(2,7,1,1)
+        }
+        .mail{
+            @include grid(2,3,2,2)
+        }
+    
+        .fo-tx2{
+            @include grid(2,3,2,2)
+        }
+    
+        .Web{
+            @include grid(3,4,2,2)
+        }
+    
+        .fo-tx3{
+            position: relative;
+            left: 85px;
+            @include grid(3,5,2,2)
+        }
+    
+        .fo-tx4{
+            left: 50px;
+            @include grid(5,7,2,2)
+        }
+        .UBI{@include grid(5,6,2,2)}
+    }
+
+    body{
+        height: 829px;
+    }
+
+    .Navegador .tres-lineass{
+        white-space: pre-line;
+        text-align: center;
+        position: relative;
+        top: 10px;
+        font-size: 10.5px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .fondo{
+        width: 320px;
+        height: 800px;
+        background-size: cover;
+    }
+    
+
+    .navi{
+        z-index: 2;
+        gap: 0px;
+        justify-content: start;
+    }
+
+    .navi a{
+        z-index: 2;
+        font-size: 10px;
+        line-height: 18px;
+        font-weight: 400;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .principal .titulo{
+        z-index: 0;
+        left: 20px;
+        font-size: 39px;
+        line-height: 50px ;
+    }
+
+    .principal .desarollo1{
+        z-index: 0;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .principal .desarollo2{
+        z-index: 0;
+        left: 20px;
+        font-size: 30px;
+    }
+        .Nav{
+            position: relative;
+            z-index: 1;
+            display: grid;
+            width: 100%;
+            height: 100px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 
+            "header";
+            .navi{
+                height: 85px;
+                width: 320px;
+                position: relative;
+                z-index: 1;
+                display: flex;
+                gap: 15px;
+                list-style: none;
+                background-color: map-get($colores, color1 );
+                white-space: pre-line;
+                text-align: center;
+                justify-content:center;
+        
+        
+        
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Inter', Times, serif;
+                    font-size: 10.99px;
+                    font-weight: 250;
+                    margin: auto;
+                    line-height: 15px;
+                    gap: 40px;
+                    top: 1px;
+                }
+                .nav-logo{
+                    position: relative;
+                    display: flex;
+                    top: -10px;
+                }
+
+                .nav-a{
+                    position: relative;
+                    top: -5px;
+                }
+                .nav--a{
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        
+        }
+        .fondo{
+            width: 300PX;
+        }
+        .pie{
+            position: absolute;
+        }
+        
+        .principal .titulo{
+            z-index: 0;
+            position: relative;
+            left: 5px;
+            bottom: 50px;
+            font-size: 50px;
+            line-height: 75px;
+        }
+        
+        .principal .desarollo1{
+            z-index: 0;
+            position: relative;
+            left: 5px;
+            top: 1px;
+        }
+        
+        .principal .desarollo2{
+            z-index: 0;
+            position: relative;
+            left: 5px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        section{
+            .titulo3{
+            display: flex;
+            z-index: 1;
+            @include font(bold);
+            color: map-get($colores, color4 );
+            @include main(relative, pre-line, center, none);
+            font-size: 20px;
+            left: 200px;
+            top: 205px;
+            width: 100%;
+            font-size: 20px;
+        }
+        .apple2{
+            display: flex ;
+            position: relative;
+            left: 205px;
+            bottom: -45px;
+            height: 100px;
+            
+        }
+        .TK{
+            position: relative;
+            left: 30px;
+            bottom: -100px;
+        }    
+        .WH{
+            position: relative;
+            left: -125px;
+            bottom: 100px;
+            height: 75px;
+        }    
+        .IG{
+            position: relative;
+            bottom: 250px;
+            left: -50px;
+            height: 75px;
+        }
+    }
+    
+    .igwh{
+        width: 100%;
+        height: 100px;
+        .tx1{
+            color: map-get($colores, color4 );
+            width: 20%;
+            position: relative;
+            @include font(bold);
+            font-size: 15px;
+            padding: 5px;
+            bottom: 180px;
+            left: 50px;
+        }
+        
+        div{
+            color: map-get($colores, color4 );
+            width: 50%;
+            height: 80px;
+            position: relative;
+            @include font(bold);
+            font-size: 30px;
+            padding: 20px;
+            bottom: 980px;
+            left: 50px;
+        }
+    
+        div{
+            color: map-get($colores, color4 );
+            width: 50%;
+            height: 100px;
+            gap: 20px;
+            @include column-position;
+            font-size: 15px;
+            padding: 20px;
+            @include font(bold);
+            bottom: 240px;
+            left: 90px;
+        }
+    
+        .t3{
+            color: map-get($colores, color4);
+            width: 50%;
+            height: 100px;
+            gap: 20px;
+            @include column-position;
+            @include font(bold);
+            font-size: 20px;
+            padding: 20px;
+            bottom: 180px;
+            left: 100px;
+        }
+    
+        .t4{
+            color: map-get($colores, color4 );
+            width: 20%;
+            height: 100px;
+            gap: 20px;
+            @include column-position;
+            @include font(bold);
+            font-size: 20px;
+            padding: 20px;
+            bottom: 115px;
+            left: 120px;
+            padding-bottom: 100px;
+        }
+    }
+    .main5{
+        .carrousel{
+            left: 19px;
+            bottom: 750px;
+            width: 280px;
+            height: 125px;
+        }
+        article{
+            position: relative;
+            left: 250px;
+            .contacton{
+                left: 100px;
+            }
+            form{
+                left: 39px;
+            }
+            #stock{
+            right: 250px;
+            width: 100%;
+            height: 259px;
+            top: -25px;
+        }
+        .logo{
+            right: 250px;
+            font-size: 13px;
+            bottom: 280px;
+        }
+        .catal{
+            right: 249px;
+            font-size: 10px;
+            bottom: 480px;
+        }
+        .contacton{
+            padding: 5px;
+            font-size: 10px;
+            left: -139px;
+            bottom: 650px;
+        }
+        .div-1{
+            right: 255px;
+            font-size: 12px;
+            bottom: 650px;
+    
+        }
+        form{
+            width: 300px;
+            height: 25px;
+            left: -175px;
+            bottom: 829px;
+            font-size: 10px;
+        }
+    
+    }
+    }
+    .fondo5{
+        height: 829px;
+    }
+    .pie4{
+        
+        position: absolute;
+        bottom: 0;
+        width: 425px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,50%) ;
+        a{
+            width: 75px;
+            height: 200PX;
+            object-fit: contain;
+            @include grid(1,3,2,3);
+            bottom: 100px;
+        } .perfil{
+            width: 150px;
+        }
+        .fo-tx1{
+            font-size: 15PX;
+            white-space: nowrap;
+            justify-self: none;
+            bottom: 15px;
+            @include grid(1,4,1,2)
+        }
+        .mail{
+            font-size: 15PX;
+            height: 20px;
+            position: relative;
+            top: 10px;
+            @include grid(2,3,2,3)
+        }
+    
+        .fo-tx2{
+            left: 28px;
+            top: 25px;
+            font-size: 10px;
+            @include grid(2,3,1,3)
+        }
+    
+        .Web{
+            font-size: 15PX;
+            left: 82px;
+            top: 50px;
+            height: 20px;
+            @include grid(1,2,1,3)
+        }
+    
+        .fo-tx3{
+            font-size: 10px;
+            top: 50px;
+            left: 130px;
+            @include grid(1,2,1,3)
+        }
+            .fo-tx4{
+            white-space: pre-line;
+            font-size: 10px;
+            bottom: 20px;
+            @include grid(1,2,1,3)
+        }
+        .fo-tx4 div{
+            white-space: pre-line;
+            font-size: 10px;
+            left: 120px;
+            top: 140px;
+            line-height:15px;
+            @include grid(1,2,1,3)
+        }
+    
+        .UBI{
+            font-size: 15PX;
+            height: 20px;
+            left: 145px;
+            top: 80px;
+            @include grid(1,2,2,3)}
+    }
+    .principal2{
+        #imagen{
+            width: 390px;
+            height: 390px;
+            object-fit: contain;
+            right: 50px;
+            top: -175px;
+        }
+        .tecnico{
+            padding-top: 25PX;
+            bottom: 300px;
+            height: 325px;
+            width: 450px;
+            left: 25px;
+        }
+        .section2{
+            position: relative;
+            right: 150px;
+            bottom: 115px;
+            font-size: 15px;
+            #tec{
+                font-size: 12px;
+                left: -250px;
+                top: 225px;
+                white-space: pre-line; 
+            }
+            #tec2{
+                font-size: 8px;
+                right: 275px;
+                top: 200px;
+                white-space: pre-line; 
+            }
+            #tec3{
+                font-size: 8px;
+                left: -290px;
+                top: 150px;
+            }
+            #tec4{
+                font-size: 8px;
+                right: 290px;
+                top: 125px;
+            }
+            .contactano2{
+                font-size: 8px;
+                top: 225px;
+                right: 300px;
+            }
+        .con2{
+            width: 50px;
+            height: 50px;
+            top: 225px;
+            left: -200px;
+        }
+        }
+    }
+    .main{
+        width: 100%;
+        height: 100px;
+        .section5{
+            position: relative;
+            height: 200px;
+            .negro4{
+                z-index: 0;
+                display: flex;
+                background-color: map-get($colores, color3 );
+                width: 100%;
+                padding: 150px;
+                padding-top: px;
+                padding-bottom: 315px;
+                position: relative;
+                bottom: 59px; 
+                height: 80px;
+            }
+            .tete{
+                z-index: 5;
+                color: map-get($colores, color2 );
+                @include main(relative, none, center, none);
+                top: 20px;
+                left: -5px;
+                padding-right: 0px;
+                font-size: 25px;
+                @include font(bolder);
+                text-align: center;
+                display: flex;
+                width: 100%;
+            }
+            .fondito5{
+                z-index: 4;
+                width: 339px;
+                @include main(relative, none, none, center);
+                display: flex;
+                bottom: 490px;
+                left: -15px;
+            }
+            
+    
+        }
+        .franja{
+            z-index: 7;
+            width: 48%;
+            padding-top: 15px;
+            padding-bottom: 1px;
+            display: flex;
+            position:  relative;
+            background-color: map-get($colores, color1 );
+            top: 25px;
+            height: 25px;
+            left: 90px;
+            }
+            
+        .bloque{
+            z-index: 4;
+            padding: 50px;
+            padding-bottom: 200px;
+            position: relative;
+            display: flex;
+            background-color: map-get($colores, color3 );
+            width: 85%;
+            height: 0px;
+            top: 10px;
+            left: 25px;
+            }
+        .etiqueta{
+            z-index: 4;
+            position: relative;
+            left: 19px;
+            width: 289px;
+            height: 125px;
+            top: -200PX;
+            }
+            height: 800px;
+    }
+    .fondo5 {
+        width: 100%;
+        overflow: hidden;
+        height: 829px; 
+        overflow-x: hidden;
+    }
+    }
+
+
+
+
+
+

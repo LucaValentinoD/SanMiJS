@@ -1,0 +1,50 @@
+@media (max-width:1300px){
+    .navi{
+        gap: 150px;
+    }
+
+    .Navegador {
+        gap: 100px;
+        justify-content: center;
+    }
+
+    .tx5{
+        position: relative;
+        right: 150px;
+        font-size: 80px;
+    }
+    .UBI{
+        left: 30px;
+        bottom: 10px;
+        @include grid(5,6,2,2)}
+        
+    .fo-tx4 div{
+        white-space: pre-line;
+        right: 49px;
+        @include grid(5,7,2,2)
+    }
+    .principal .titulo{
+        z-index: 0;
+        position: relative;
+        left: 50PX;
+        bottom: 50px;
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    .principal .desarollo1{
+        z-index: 0;
+        position: relative;
+        left: 50PX;
+        top: 1px;
+    }
+
+    .principal .desarollo2{
+        z-index: 0;
+        position: relative;
+        left: 50PX;
+    }
+    div.dropdown{
+        display: none;
+    }
+}

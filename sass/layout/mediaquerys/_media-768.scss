@@ -1,0 +1,724 @@
+@media (max-width:768px){
+    .Navegador {
+        z-index: 8;
+        display: flex;
+        font-family: 'Inter', Times, serif;
+        font-weight: 250;
+        background-color: #020262;
+        position: fixed;
+        width: 768px;
+        height: 100px;
+        flex-direction: row;
+        gap: 59px;
+        justify-content: center;
+    }
+
+    .navi{
+        z-index: 2;
+        display: flex;
+        gap: 80px;
+        list-style: none;
+        background-color: #020262;
+        white-space: pre-line;
+        text-align: center;
+        justify-content:center;
+    }
+
+    .principal .titulo{
+        z-index: 0;
+        position: relative;
+        left: 25px;
+    }
+
+    .principal .desarollo1{
+        z-index: 0;
+        position: relative;
+        left: 25px;
+    }
+
+    .principal .desarollo2{
+        z-index: 0;
+        position: relative;
+        left: 25px;
+    }
+
+    .tx5{
+        font-size: 50px;
+        right: 200px;
+        bottom: 450px;
+    }
+
+    .insano{
+        left: 350px;
+        top: 100px;
+    }
+
+    .navi a{
+        z-index: 2;
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-family: 'Inter', Times, serif;
+        font-size: 18px;
+        font-weight: 250;
+        margin: auto;
+        line-height: 30px;
+        gap: 85px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    .Navegador a{
+        color: #ffffff;
+        padding-top: 25px;
+    }
+
+    .fondo{
+        background-size: auto
+    }
+    
+    .pie{
+        position: fixed;
+    }
+    
+    .Navegador .links{
+        position: relative;
+        top: 10px;
+        font-size: 25.5px
+    }
+    
+    .Navegador .linked{
+        position: relative;
+        top: 15px;
+        font-size: 25.5px
+    }
+    
+    .Navegador .tres-lineas{
+        white-space: pre-line;
+        text-align: center;
+        position: relative;
+        bottom: 20px;
+    }
+    
+    .Navegador .link{
+        font-size: 23.5px
+    }
+    
+    .Navegador .tres-lineass{
+        white-space: pre-line;
+        text-align: center;
+        position: relative;
+        bottom: 10px;
+        font-size: 25.5px
+    }
+
+    .fondo{
+        width: 738px;
+        height: 800px;
+    }
+    .fondo{
+        background-image: url(../assets/photo-1519326931307-6003daea39f0.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: -300px;
+    }
+
+    .navi{
+        gap: 30px;
+    }
+    
+    .navi a{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+
+    .Nav{
+        position: relative;
+        z-index: 1;
+        display: grid;
+        width: 100%;
+        height: 100px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        "header";
+        .navi{
+            height: 85px;
+            width: 768px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 80px;
+            list-style: none;
+            background-color: map-get($colores, color1 );
+            white-space: pre-line;
+            text-align: center;
+            justify-content:center;
+
+
+
+            a{
+                position: relative;
+                text-decoration: none;
+                color: white;
+                font-family: 'Inter', Times, serif;
+                font-size: 18px;
+                font-weight: 250;
+                margin: auto;
+                line-height: 25px;
+                gap: 50px;
+                bottom: 10px;
+            }
+            .nav-a{
+                position: relative;
+                bottom: 20px;
+            }
+            .nav--a{
+                position: relative;
+                top: 5px;
+            }
+        }
+
+    }
+    .principal .titulo{
+        z-index: 0;
+        position: relative;
+        left: 5px;
+        bottom: 50px;
+        font-size: 70px;
+        line-height: 90px;
+    }
+
+    .principal .desarollo1{
+        z-index: 0;
+        position: relative;
+        left: 5px;
+        top: 1px;
+    }
+
+    .principal .desarollo2{
+        z-index: 0;
+        position: relative;
+        left: 5px;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .pie5{
+        position: absolute;
+        bottom: 0;
+        width: 768px;
+        .perfil{
+            width: 140px;
+            object-fit: contain;
+            @include grid(1,7,none,none)
+        }
+        .fo-tx1{
+            @include grid(2,7,1,1)
+        }
+        .mail{
+            height: 45px;
+            @include grid(2,3,2,2)
+        }
+    
+        .fo-tx2{
+            left: 59px;
+            font-size: 15px;
+            @include grid(2,3,2,2)
+        }
+    
+        .Web{
+            left: 40px;
+            bottom: 10px;
+            height: 45px;
+            @include grid(3,4,2,2)
+        }
+    
+        .fo-tx3{
+            font-size: 15px;
+            bottom: 10px;
+            left: 85px;
+            @include grid(3,5,2,2)
+        }
+    
+        .fo-tx4 div{
+            white-space: pre-line;
+            font-size: 15px;
+            bottom: 20px;
+            left: 55px;
+            @include grid(5,7,2,2)
+        }
+        .UBI{
+            left: 65px;
+            bottom: 10px;
+            @include grid(5,6,2,2)}
+    }
+    .pie{
+        position: absolute;
+        bottom: 0;
+        width: 768px;
+        .perfil{
+            width: 140px;
+            object-fit: contain;
+            @include grid(1,7,none,none)
+        }
+        .fo-tx1{
+            @include grid(2,7,1,1)
+        }
+        .mail{
+            height: 45px;
+            @include grid(2,3,2,2)
+        }
+    
+        .fo-tx2{
+            left: 59px;
+            font-size: 15px;
+            @include grid(2,3,2,2)
+        }
+    
+        .Web{
+            left: 50px;
+            bottom: 10px;
+            height: 45px;
+            @include grid(3,4,2,2)
+        }
+    
+        .fo-tx3{
+            font-size: 15px;
+            bottom: 10px;
+            left: 85px;
+            @include grid(3,5,2,2)
+        }
+    
+        .fo-tx4 div{
+            white-space: pre-line;
+            font-size: 15px;
+            bottom: 20px;
+            left: 55px;
+            @include grid(5,7,2,2)
+        }
+        .UBI{
+            left: 65px;
+            bottom: 10px;
+            @include grid(5,6,2,2)}
+    }
+    div.dropdown{
+        display: none;
+    }
+    section{
+        .titulo3{
+        display: flex;
+        z-index: 1;
+        @include font(bold);
+        color: map-get($colores, color4 );
+        @include main(relative, pre-line, center, none);
+        font-size: 25px;
+        left: 450px;
+        top: 150px;
+        width: 100%;
+        font-size: 50px;
+    }
+    .apple2{
+        display: flex ;
+        position: relative;
+        left: 505px;
+        bottom: 150px;
+        
+    }
+    .TK{
+        position: relative;
+        left: 50px;
+        bottom: 100px;
+    }    
+    .WH{
+        position: relative;
+        left: -95px;
+        bottom: 270px;
+    }    
+    .IG{
+        position: relative;
+        bottom: 400px;
+        left: -25px;
+    }
+}
+
+.igwh{
+    width: 100%;
+    height: 100px;
+    .tx1{
+        color: map-get($colores, color4 );
+        width: 20%;
+        position: relative;
+        @include font(bold);
+        font-size: 20px;
+        padding: 5px;
+        bottom: 350px;
+        left: 50px;
+    }
+    
+    div{
+        color: map-get($colores, color4 );
+        width: 50%;
+        height: 80px;
+        position: relative;
+        @include font(bold);
+        font-size: 30px;
+        padding: 20px;
+        bottom: 380px;
+        left: 50px;
+    }
+
+    div{
+        color: map-get($colores, color4 );
+        width: 50%;
+        height: 100px;
+        gap: 20px;
+        @include column-position;
+        font-size: 30px;
+        padding: 20px;
+        @include font(bold);
+        bottom: 380px;
+        left: 100px;
+    }
+
+    .t3{
+        color: map-get($colores, color4);
+        width: 50%;
+        height: 100px;
+        gap: 20px;
+        @include column-position;
+        @include font(bold);
+        font-size: 30px;
+        padding: 20px;
+        bottom: 350px;
+        left: 120px;
+    }
+
+    .t4{
+        color: map-get($colores, color4 );
+        width: 20%;
+        height: 100px;
+        gap: 20px;
+        @include column-position;
+        @include font(bold);
+        font-size: 30px;
+        padding: 20px;
+        bottom: 315px;
+        left: 120px;
+        padding-bottom: 100px;
+    }
+}
+main{
+    height: 88vh;
+
+    .insano{
+        position: relative;
+        left: 325px;
+        top: 30px;
+        height: 550px;
+    }
+    .tx5{
+        position: relative;
+        font-size: 30px;
+        bottom: 500px;
+        right: 200px;
+        color: map-get($colores, color3);
+        @include font(bold);
+        @include main(relative, pre-line, center, none);
+        font-size: 50px;
+    }
+}
+.pie4{
+    position: absolute;
+    bottom: 0;
+    width: 768px;
+    .perfil{
+        width: 140px;
+        object-fit: contain;
+        @include grid(1,7,none,none)
+    }
+    .fo-tx1{
+        @include grid(2,7,1,1)
+    }
+    .mail{
+        height: 45px;
+        @include grid(2,3,2,2)
+    }
+
+    .fo-tx2{
+        left: 59px;
+        font-size: 15px;
+        @include grid(2,3,2,2)
+    }
+
+    .Web{
+        left: 50px;
+        bottom: 10px;
+        height: 45px;
+        @include grid(3,4,2,2)
+    }
+
+    .fo-tx3{
+        font-size: 15px;
+        bottom: 10px;
+        left: 85px;
+        @include grid(3,5,2,2)
+    }
+
+    .fo-tx4 div{
+        white-space: pre-line;
+        font-size: 15px;
+        bottom: 20px;
+        left: 55px;
+        @include grid(5,7,2,2)
+    }
+    .UBI{
+        left: 65px;
+        bottom: 10px;
+        @include grid(5,6,2,2)}
+}
+.pie3{
+    position: absolute;
+    bottom: 0;
+    width: 768px;
+    .perfil{
+        width: 140px;
+        object-fit: contain;
+        @include grid(1,7,none,none)
+    }
+    .fo-tx1{
+        @include grid(2,7,1,1)
+    }
+    .mail{
+        height: 45px;
+        @include grid(2,3,2,2)
+    }
+
+    .fo-tx2{
+        left: 59px;
+        font-size: 15px;
+        @include grid(2,3,2,2)
+    }
+
+    .Web{
+        left: 50px;
+        bottom: 10px;
+        height: 45px;
+        @include grid(3,4,2,2)
+    }
+
+    .fo-tx3{
+        font-size: 15px;
+        bottom: 10px;
+        left: 85px;
+        @include grid(3,5,2,2)
+    }
+
+    .fo-tx4 div{
+        white-space: pre-line;
+        font-size: 15px;
+        bottom: 20px;
+        left: 55px;
+        @include grid(5,7,2,2)
+    }
+    .UBI{
+        left: 65px;
+        bottom: 10px;
+        @include grid(5,6,2,2)}
+}
+
+
+.main5{
+    .carrousel{
+        left: 400px;
+        bottom: 950px;
+        width: 380px;
+        height: 125px;
+    }
+    article{
+        position: relative;
+        left: 250px;
+        .contacton{
+            left: 100px;
+        }
+        form{
+            left: 39px;
+        }
+        #stock{
+        right: 625px;
+        width: 70%;
+        height: 720px;
+        top: -25px;
+    }
+    .logo{
+        right: 445px;
+        font-size: 18px;
+        bottom: 250px;
+    }
+    .catal{
+        right: 450px;
+        font-size: 15px;
+        bottom: 375px;
+    }
+    .contacton{
+        padding: 10px;
+        font-size: 15px;
+        left: -125px;
+        bottom: 480px;
+    }
+    .div-1{
+        right: 440px;
+        font-size: 15px;
+        bottom: 450px;
+
+    }
+    form{
+        padding: 10px;
+        left: -180px;
+        bottom: 599px;
+    }
+
+}
+}
+.principal2{
+    #imagen{
+        width: 490px;
+        height: 390px;
+        object-fit: contain;
+        right: 25px;
+        top: -125px;
+    }
+    .tecnico{
+        padding-top: 25PX;
+        bottom: 300px;
+        height: 325px;
+        width: 549px;
+        left: 250px;
+    }
+    .section2{
+        position: relative;
+        right: 150px;
+        bottom: 115px;
+        font-size: 15px;
+        #tec{
+            font-size: 12px;
+            left: 75px;
+            top: 190px;
+            white-space: pre-line; 
+        }
+        #tec2{
+            font-size: 10px;
+            right: -75px;
+            top: 175px;
+            white-space: pre-line; 
+        }
+        #tec3{
+            font-size: 10px;
+            left: -25px;
+            top: 150px;
+        }
+        #tec4{
+            font-size: 10px;
+            right: 125px;
+            top: 125px;
+        }
+        .contactano2{
+            top: 200px;
+            right: 275px;
+            white-space: nowrap;
+        }
+    .con2{
+        top: 175px;
+        left: -59px;
+    }
+    }
+}
+.main{
+    width: 100%;
+    height: 100px;
+    .section5{
+        position: relative;
+        height: 200px;
+        .negro4{
+            z-index: 0;
+            display: flex;
+            background-color: map-get($colores, color3 );
+            width: 100%;
+            padding: 150px;
+            padding-top: px;
+            padding-bottom: 315px;
+            position: relative;
+            bottom: 105px; 
+            height: 100px;
+        }
+        .tete{
+            z-index: 5;
+            color: map-get($colores, color2 );
+            @include main(relative, none, center, none);
+            top: 20px;
+            left: 100px;
+            padding-right: 0px;
+            font-size: 38px;
+            @include font(bolder);
+            text-align: center;
+            display: flex;
+            width: 75%;
+        }
+        .fondito5{
+            z-index: 4;
+            width: 59%;
+            @include main(relative, none, none, center);
+            display: flex;
+            bottom: 490px;
+            left: 169px;
+        }
+        
+
+    }
+    .franja{
+        z-index: 7;
+        width: 28%;
+        padding-top: 15px;
+        padding-bottom: 1px;
+        display: flex;
+        position:  relative;
+        background-color: map-get($colores, color1 );
+        top: 125px;
+        height: 25px;
+        left: 290px;
+        }
+        
+    .bloque{
+        z-index: 4;
+        padding: 50px;
+        padding-bottom: 250px;
+        position: relative;
+        display: flex;
+        background-color: map-get($colores, color3 );
+        width: 50%;
+        height: 25px;
+        top: 112px;
+        left: 200px;
+        }
+    .etiqueta{
+        z-index: 4;
+        position: relative;
+        left: 220px;
+        width: 350px;
+        height: 200px;
+        top: -125PX;
+        }
+        height: 800px;
+}
+.fondo5 {
+    width: 100%;
+    overflow: hidden;
+    height: 829px; 
+    overflow-x: hidden;
+}
+}
+
+
+

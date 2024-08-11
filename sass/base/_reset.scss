@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo{
+    width: 100%;
+    height: 125vh;
+    position:sticky;
+    overflow-x: hidden;
+}
+
+.fondo{
+    background-image: url(../assets/photo-1519326931307-6003daea39f0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.fondo5 {
+    width: 100%;
+    overflow: hidden;
+    height: 829px; 
+    overflow-x: hidden;
+}
+
+.fondo2{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.PRINCIPAL5{
+    background-color: map-get($colores, color2 );
+    overflow-x: hidden;
+}
+.gren{
+    z-index: 1;
+    display: grid;
+    width: 100vh;
+    height: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+}

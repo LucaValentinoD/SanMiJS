@@ -1,0 +1,411 @@
+@media (max-width:1440px){
+
+
+
+    .Navegador {
+        gap: 150px;
+        justify-content: center;
+    }
+
+    .Nav .navi{
+        z-index: 2;
+        display: flex;
+        gap: 150px;
+        list-style: none;
+        background-color: #020262;
+        white-space: pre-line;
+        text-align: center;
+        justify-content:center;
+    }
+
+    .principal .desarollo2{
+        top: 25px;
+    }
+
+
+
+    .navi a{
+        z-index: 2;
+        text-decoration: none;
+        color: white;
+        font-family: 'Inter', Times, serif;
+        font-size: 25px;
+        font-weight: 250;
+        margin: auto;
+        line-height: 30px
+    }
+
+    .fondo{
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+
+    .insano{
+        width: 450px;
+        top: 150px;
+    }    
+
+    .pie{
+        width: 1440px;
+    }
+
+    .tx5{
+        position: relative;
+        right: 350px;
+        bottom: 550px;
+    }
+
+
+    .insano{
+        position: relative;
+        left: 850px;
+    }
+    .pie{
+        .perfil{
+            width: 190px;
+            @include grid(1,7,none,none)
+        }
+        .fo-tx1{
+            @include grid(2,7,1,1)
+        }
+        .mail{
+            @include grid(2,3,2,2)
+        }
+    
+        .fo-tx2{
+            @include grid(2,3,2,2)
+        }
+    
+        .Web{
+            @include grid(3,4,2,2)
+        }
+    
+        .fo-tx3{
+            position: relative;
+            left: 85px;
+            @include grid(3,5,2,2)
+        }
+    
+        .fo-tx4{
+            left: 50px;
+            @include grid(5,7,2,2)
+        }
+        .UBI{@include grid(5,6,2,2)}
+    }
+
+    .igwh{
+        .tx1{
+            bottom: 480px;
+            left: 80px;
+        }
+        div{
+            bottom: 480px;
+            left: 150px;
+        }
+        .t3{
+            bottom: 440px;
+            left: 160px;
+        }
+        .t4{
+            bottom: 390px;
+            left: 150px;
+        }
+
+    }
+    div.dropdown{
+        display: none;
+    }
+    section{
+        .IG{
+            bottom: 500px;
+            left: -25px;
+        }
+        .WH{
+            bottom: 350px;
+            left: -89px;
+        }
+        .TK{
+            bottom: 150px;
+            left: 50px;
+        }
+        .titulo3{
+        display: flex;
+        z-index: 1;
+        @include font(bold);
+        color: map-get($colores, color4 );
+        @include main(relative, pre-line, center, none);
+        font-size: 100px;
+        left: 750px;
+        top:180px;
+        width: 100%;
+        font-size: 100px;
+    }
+    .apple2{
+        display: flex ;
+        position: relative;
+        left: 950px;
+        bottom: 270px;
+        
+    }} .pie5{position: absolute;}
+    main{
+        height: 90vh;
+    
+        .insano{
+            position: relative;
+            left: 900px;
+            top: 50px;
+            height: 550px;
+        }
+        .tx5{
+            position: relative;
+            font-size: 30px;
+            bottom: 500px;
+            right: 400px;
+            color: map-get($colores, color3);
+            @include font(bold);
+            @include main(relative, pre-line, center, none);
+            font-size: 80px;
+        }
+    }
+    .pie5{
+        .perfil{
+            width: 190px;
+            @include grid(1,7,none,none)
+        }
+        .fo-tx1{
+            @include grid(2,7,1,1)
+        }
+        .mail{
+            @include grid(2,3,2,2)
+        }
+    
+        .fo-tx2{
+            @include grid(2,3,2,2)
+        }
+    
+        .Web{
+            @include grid(3,4,2,2)
+        }
+    
+        .fo-tx3{
+            position: relative;
+            left: 85px;
+            @include grid(3,5,2,2)
+        }
+    
+        .fo-tx4{
+            left: 50px;
+            @include grid(5,7,2,2)
+        }
+        .UBI{@include grid(5,6,2,2)}
+    }
+
+
+
+.pie4{
+    .perfil{
+        width: 190px;
+        @include grid(1,7,none,none)
+    }
+    .fo-tx1{
+        @include grid(2,7,1,1)
+    }
+    .mail{
+        @include grid(2,3,2,2)
+    }
+
+    .fo-tx2{
+        @include grid(2,3,2,2)
+    }
+
+    .Web{
+        @include grid(3,4,2,2)
+    }
+
+    .fo-tx3{
+        position: relative;
+        left: 85px;
+        @include grid(3,5,2,2)
+    }
+
+    .fo-tx4{
+        left: 50px;
+        @include grid(5,7,2,2)
+    }
+    .UBI{@include grid(5,6,2,2)}
+}
+
+        .main5{
+            .carrousel{
+                left: 950px;
+            }
+            article{
+                position: relative;
+                left: 250px;
+                .contacton{
+                    left: 100px;
+                }
+                form{
+                    left: 39px;
+                }
+                #stock{
+                right: 750px;
+                width: 70%;
+                height: 820px;
+            }
+
+
+            }
+            .fondo5{
+                height: 829px;
+            }
+
+
+
+
+            }
+            .pie3{
+                .perfil{
+                    width: 190px;
+                    @include grid(1,7,none,none)
+                }
+                .fo-tx1{
+                    @include grid(2,7,1,1)
+                }
+                .mail{
+                    @include grid(2,3,2,2)
+                }
+            
+                .fo-tx2{
+                    @include grid(2,3,2,2)
+                }
+            
+                .Web{
+                    @include grid(3,4,2,2)
+                }
+            
+                .fo-tx3{
+                    position: relative;
+                    left: 85px;
+                    @include grid(3,5,2,2)
+                }
+            
+                .fo-tx4{
+                    left: 50px;
+                    @include grid(5,7,2,2)
+                }
+                .UBI{@include grid(5,6,2,2)}
+            }
+            .principal2{
+                #imagen{
+                    width: 700px;
+                    height: 390px;
+                }
+                .tecnico{
+                    height: 310px;
+                    width: 925px;
+                    left: 550px;
+                }
+                .section2{
+                    position: relative;
+                    right: 190px;
+                    bottom: 115px;
+                    font-size: 15px;
+                    #tec2{
+                        right: 50px;
+                    }
+                    .contactano2{
+                        top: 125px;
+                        right: 300px;
+                    }
+                .con2{
+                    top: 115px;
+                }
+                }
+            }
+            .main{
+                width: 100%;
+                height: 100px;
+                .section5{
+                    position: relative;
+                    height: 200px;
+                    .negro4{
+                        z-index: 0;
+                        display: flex;
+                        background-color: map-get($colores, color3 );
+                        width: 100%;
+                        padding: 150px;
+                        padding-top: px;
+                        padding-bottom: 315px;
+                        position: relative;
+                        bottom: 50px; 
+                        height: 100px;
+                    }
+                    .tete{
+                        z-index: 5;
+                        color: map-get($colores, color2 );
+                        @include main(relative, none, center, none);
+                        top: 70px;
+                        left: 350px;
+                        padding-right: 0px;
+                        font-size: 48px;
+                        @include font(bolder);
+                        text-align: center;
+                        display: flex;
+                        width: 50%;
+                    }
+                    .fondito5{
+                        z-index: 4;
+                        width: 45%;
+                        @include main(relative, none, none, center);
+                        display: flex;
+                        bottom: 420px;
+                        left: 390px;
+                    }
+                    
+        
+                }
+                .franja{
+                    z-index: 7;
+                    width: 28%;
+                    padding-top: 15px;
+                    padding-bottom: 1px;
+                    display: flex;
+                    position:  relative;
+                    background-color: map-get($colores, color1 );
+                    top: 259px;
+                    height: 25px;
+                    left: 520px;
+                    }
+                    
+                .bloque{
+                    z-index: 4;
+                    padding: 50px;
+                    padding-bottom: 250px;
+                    position: relative;
+                    display: flex;
+                    background-color: map-get($colores, color3 );
+                    width: 33.5%;
+                    height: 50px;
+                    top: 250px;
+                    left: 475px;
+                    }
+                .etiqueta{
+                    z-index: 4;
+                    position: relative;
+                    left: 485px;
+                    width: 32%;
+                    height: 200px;
+                    }
+                    height: 800px;
+
+        }
+        .fondo5 {
+            width: 100%;
+            overflow: hidden;
+            height: 829px; 
+            overflow-x: hidden;
+        }
+        }

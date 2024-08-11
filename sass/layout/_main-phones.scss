@@ -1,0 +1,138 @@
+.main5{
+
+    
+    article{
+        width: 100%;
+        height: 250px;
+        #stock{
+        position: absolute;
+        width: 45%;
+        height: 920px;
+        object-fit: cover;
+    }
+    }
+    .catal{
+        @include main(relative, pre-line, center, none);
+        bottom: 300px;
+        padding: 20px;
+        width: 100%;
+        height: 250px;
+        color: map-get($colores, color4 );
+        @include font(31.25rem);
+        right: 550px;
+        font-size: 25px;
+    }
+    
+    .logo{
+        @include main(relative, pre-line, center, none);
+        bottom: 175px;
+        padding: 20px;
+        width: 100%;
+    
+        color: map-get($colores, color4 );
+        @include font(bolder);
+        right: 550px;
+        font-size: 25px;
+    }
+    #contacton2{
+        position: relative;
+        bottom: 450px;
+        padding: 15px;
+        left: 369px;
+        color: map-get($colores, color3 );
+        @include font(bolder);
+        text-decoration: none;
+        background-color: map-get($colores, color4 );
+    
+    }
+
+    #productos{
+        display: flex;
+        flex-wrap: wrap;
+        top: 10px;
+        position: relative;
+        text-align: center;
+        justify-content:center;
+        column-gap: 350px;
+
+            .producto{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                width: 150px;
+                border: 1px solid black;
+            }
+
+            .producto img{
+                object-fit: contain;
+
+            }
+    }
+    #productos{
+        display: none;
+    }
+    p{
+        margin: 0%;
+    }
+    .esconder{
+        display: none !important; 
+    }
+
+    .mostrar{
+        display: flex !important;
+    }
+    
+    .contacton{
+        position: relative;
+        bottom: 380px;
+        padding: 15px;
+        width: 25%;
+    
+        left: 329px;
+        color: map-get($colores, color3 );
+        @include font(bolder);
+        text-decoration: none;
+        background-color: map-get($colores, color4 );
+    
+    }
+    
+    .restock{
+        position: relative;
+        bottom: 1000px;
+        left: 1100px;
+        object-fit: cover;
+        width:30%;
+        height: 700px;
+        padding: 5px;
+    }
+    .div-1{
+        @include main(relative, pre-line, center, none);
+        bottom: 350px;
+        padding: 20px;
+        width: 100%;
+        height: 250px;
+        color: map-get($colores, color4 );
+        @include font(31.25rem);
+        right: 550px;
+        font-size: 25px;
+    }
+    form{
+        position: relative;
+        bottom: 500px;
+        left: 290px;
+        padding: 20px;
+        border: none;
+    }
+    input::placeholder{
+        color: map-get($colores, color3 );    
+    }
+    .carrousel{
+        width: 500px;
+        height: 250px;
+        position: relative;
+        bottom: 900px;
+        left: 1150px;
+    }
+
+}

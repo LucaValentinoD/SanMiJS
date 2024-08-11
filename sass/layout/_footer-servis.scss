@@ -1,0 +1,88 @@
+.pie4{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(2,50%) ;
+    grid-template-areas: 
+    "footer";
+    position: relative;
+    bottom: 220px;
+    background-color: map-get($colores, color1 );
+
+    .contactanos{
+        width: 100%;
+        height: 100%;
+        background-color: map-get($colores, color3 );
+        @include grid(1,8,1,1);
+    }
+    div{
+        @include a;
+        text-decoration: none
+    }
+    
+    a{
+        text-decoration: none
+    }
+        .perfil{
+        width: 70%;
+        height: 125px;
+        position: relative;
+        justify-self: center;
+        align-items: center;
+        @include grid(1,7,2,2);
+        display: grid;
+    }
+    .fo-tx1{
+        justify-self: center;
+        align-items: center;
+        font-weight:bolder ;
+        @include grid(2,7,2,2);
+        bottom: 45px;
+    }
+    .mail{
+        @include grid(2,3,2,2);
+        position: relative;
+        top: 25px;
+    }
+
+    .fo-tx2{
+        position: relative;
+        left: 80px;
+        bottom: 5px;
+        justify-content: center;
+        align-items: center;
+        @include grid(2,3,2,2)
+    }
+
+    .Web{
+        justify-self: center;
+        position: relative;
+        align-self: center;
+        left: 45px ;
+        bottom: 10px;
+        @include grid(3,4,2,2)
+    }
+
+    .fo-tx3{
+        position: relative;
+        left: 100px;
+        @include grid(2,6,2,2)
+    }
+
+    .fo-tx4{
+        display: grid;
+        position: relative;
+        white-space: nowrap;
+        @include grid(5,7,2,2)
+    }
+    .UBI{
+        height: 50px;
+        display: grid;
+        position: relative;
+        top: 25px;
+        @include grid(5,6,2,2)
+    }
+}

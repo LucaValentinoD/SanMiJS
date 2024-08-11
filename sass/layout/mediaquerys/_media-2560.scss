@@ -1,0 +1,45 @@
+@media (max-width:2560px){
+    .tx5{
+        position: relative;
+        right: 250px;
+    }
+
+    main{
+        width: 100%;
+        height: 700px;
+    }
+
+    .insano{
+        position: relative;
+        right: 100px;
+    }
+
+    .fondo{
+        overflow-x: hidden;
+    }
+
+    div.dropdown{
+        display: none;
+    }
+
+    main{
+        height: 100vh;
+    
+        .insano{
+            position: relative;
+            left: 1200px;
+            top: 50px;
+            height: 850px;
+        }
+        .tx5{
+            position: relative;
+            font-size: 30px;
+            bottom: 690px;
+            right: 400px;
+            color: map-get($colores, color3);
+            @include font(bold);
+            @include main(relative, pre-line, center, none);
+            font-size: 100px;
+        }
+    }
+}

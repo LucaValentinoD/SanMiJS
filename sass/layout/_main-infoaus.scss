@@ -1,0 +1,20 @@
+main{
+    height: 100vh;
+
+    .insano{
+        position: relative;
+        left: 1200px;
+        top: 150px;
+        height: 500px;
+    }
+    .tx5{
+        position: relative;
+        font-size: 30px;
+        bottom: 690px;
+        right: 400px;
+        color: map-get($colores, color3);
+        @include font(bold);
+        @include main(relative, pre-line, center, none);
+        font-size: 100px;
+    }
+}
