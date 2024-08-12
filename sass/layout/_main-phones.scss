@@ -43,34 +43,108 @@
         @include font(bolder);
         text-decoration: none;
         background-color: map-get($colores, color4 );
+        
+    }
+
+    #init{
+        display: none;
+        position: relative;
+        top: 50px;
+        padding: 15px;
+        left: 69px;
+        color: map-get($colores, color3 );
+        @include font(bolder);
+        text-decoration: none;
+        background-color: map-get($colores, color4 );
     
+    }
+
+    #Carrito{
+        display: none;
+        position: relative;
+        top: 50px;
+        padding: 15px;
+        left: 69px;
+        color: map-get($colores, color3 );
+        @include font(bolder);
+        text-decoration: none;
+        background-color: map-get($colores, color4 );
+    
+    }
+
+    #buscador{
+        display: none;
+        position: relative;
+        top: 50px;
+        left: 69px;
+        padding: 4,5px;
+        border: none;
+        outline: none;
+    }
+
+    #buscar{
+        display: none;
+        position: relative;
+        top: 5px;
+        padding: 5px;
+        left: 469px;
+        font-size: 12px;
+        color: map-get($colores, color3 );
+        @include font(bolder);
+        text-decoration: none;
+        background-color: map-get($colores, color4 );
+    }
+
+    .container{
+        position: relative;
+    }
+
+    #lupita{
+        top: 14px;
+        left: 100px;
+        position: absolute;
+        width: 15px;
+        display: none;
+        pointer-events: none;
+        z-index: 10;
     }
 
     #productos{
         display: flex;
         flex-wrap: wrap;
-        top: 10px;
+        top: 69px;
         position: relative;
         text-align: center;
-        justify-content:center;
-        column-gap: 350px;
+        justify-content:space-around;
+        
 
             .producto{
                 display: flex;
                 flex-direction: column;
                 text-align: center;
-                gap: 10px;
-                width: 150px;
-                border: 1px solid black;
+                gap: 20px;
+                height: auto;
+                @include font(bolder);
+                max-width: 250px;
+                background-color: #FFFFFF;
+                border-radius: 10px;
             }
 
             .producto img{
-                object-fit: contain;
+                object-fit: cover;
 
+            }
+            .producto button{
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                color: #FFFFFF;
+                background-color: #3483FA;
+                border: none;
+                outline: none;
             }
     }
     #productos{
-        display: none;
+        display: none; 
     }
     p{
         margin: 0%;
@@ -81,6 +155,9 @@
 
     .mostrar{
         display: flex !important;
+    }
+    .mostrar2{
+        display: inline !important;
     }
     
     .contacton{
@@ -133,6 +210,7 @@
         position: relative;
         bottom: 900px;
         left: 1150px;
+        background-color: #FFFFFF;
     }
 
 }
