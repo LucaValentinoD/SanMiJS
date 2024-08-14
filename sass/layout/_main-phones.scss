@@ -45,6 +45,17 @@
         background-color: map-get($colores, color4 );
         
     }
+    #contacton3{
+        display: none;
+        position: relative;
+        padding: 15px;
+        bottom: 508px;
+        left: 149px;
+        color: map-get($colores, color3 );
+        @include font(bolder);
+        text-decoration: none;
+        background-color: map-get($colores, color4 );
+    }
 
     #init{
         display: none;
@@ -107,6 +118,19 @@
         display: none;
         pointer-events: none;
         z-index: 10;
+    }
+    #x{
+        display: none;
+    }
+    #contenedorCarrito{
+        display: flex;
+        border: 2px solid black;
+        width: 1850px;
+        min-height: 500px;
+        position: relative;
+        top: 69px;
+        left: 29px;
+        gap: 10px;
     }
 
     #productos{

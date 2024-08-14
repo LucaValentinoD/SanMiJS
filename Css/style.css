@@ -389,6 +389,18 @@ main {
   text-decoration: none;
   background-color: #ffffff; }
 
+.main5 #contacton3 {
+  display: none;
+  position: relative;
+  padding: 15px;
+  bottom: 508px;
+  left: 149px;
+  color: #000000;
+  font-weight: bolder;
+  font-family: 'Inter', Times, serif;
+  text-decoration: none;
+  background-color: #ffffff; }
+
 .main5 #init {
   display: none;
   position: relative;
@@ -446,6 +458,19 @@ main {
   display: none;
   pointer-events: none;
   z-index: 10; }
+
+.main5 #x {
+  display: none; }
+
+.main5 #contenedorCarrito {
+  display: flex;
+  border: 2px solid black;
+  width: 1850px;
+  min-height: 500px;
+  position: relative;
+  top: 69px;
+  left: 29px;
+  gap: 10px; }
 
 .main5 #productos {
   display: flex;
