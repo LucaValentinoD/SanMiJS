@@ -3,7 +3,7 @@ let losProductos = [
     { id: 2, nombre: "Iphone 12", categoria: "Model-Old", stock: 4, precio: 750, imagen: "iphone12.png" },
     { id: 3, nombre: "Iphone 13", categoria: "Model-Old", stock: 2, precio: 800, imagen: "Iphone13.png" },
     { id: 4, nombre: "Iphone 14", categoria: "Model-Normal", stock: 1, precio: 950, imagen: "Iphone14.png" },
-    { id: 5, nombre: "Iphone 14 Pro", categoria: "Model-Normal", stock: 5, precio: 1100, imagen: "Iphone14Pro.png" },
+    { id: 5, nombre: "Iphone 14 Pro", categoria: "Model-Normal", stock: 5, precio: 1100, imagen: "Iphone14St.png" },
     { id: 6, nombre: "Iphone 15", categoria: "Model-New", stock: 8, precio: 1500, imagen: "Iphone15.png" },
     { id: 7, nombre: "Iphone 15 Pro", categoria: "Model-New", stock: 8, precio: 1800, imagen: "Iphone15prob.png" }]
 
@@ -59,7 +59,7 @@ let bproductos = document.getElementById("contacton3")
 
 botonVolverinit.addEventListener("click", mostrarEsconder2)
 botonVerCatalago.addEventListener("click", mostrarEsconder)
-botoncarrito.addEventListener("click",mostrarEsconder3 )
+botoncarrito.addEventListener("click", mostrarEsconder3)
 bproductos.addEventListener("click", mostrarEsconder)
 
 function mostrarEsconder() {
@@ -104,7 +104,7 @@ function mostrarEsconder2() {
 }
 
 
-function mostrarEsconder3(){
+function mostrarEsconder3() {
     let contenedorinicio = document.getElementById("inicio")
     let contenedorProductos = document.getElementById("productos")
     let botonInit = document.getElementById("init")
@@ -131,55 +131,82 @@ function mostrarEsconder3(){
 
 
 
-function agregarAlCarrito(e, productos){
+function agregarAlCarrito(e, productos) {
     let carrito = obtenerCarrito()
-    let idProducto= Number(e.target.id)
+    let idProducto = Number(e.target.id)
     let productoBuscado = productos.find(producto => producto.id === idProducto)
-        
+
     let productoEnCarrito = carrito.find(producto => producto.id === idProducto);
-        
+
     if (productoEnCarrito) {
         productoEnCarrito.unidades += 1;
         productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
     } else {
         carrito.push({
+            imagen: productoBuscado.imagen,
             id: productoBuscado.id,
             nombre: productoBuscado.nombre,
             precioUnitario: productoBuscado.precio,
             unidades: 1,
             subtotal: productoBuscado.precio
         });
-    }    
-    setearCarrito(carrito);        
-    renderizarCarrito(carrito);        
+    }
+    setearCarrito(carrito);
+    renderizarCarrito(carrito);
     console.log("Carrito después de añadir:", carrito);
 }
 
 function renderizarCarrito(carrito) {
-    let contenedorCarrito = document.getElementById("contenedorCarrito")
-    contenedorCarrito.innerHTML = ""
-    carrito.forEach(productoBuscado=> {
-        contenedorCarrito.innerHTML += `
-                <p>Producto elegido: ${productoBuscado.nombre}</p>
-                <p>Precio Unitario: ${productoBuscado.precioUnitario}</p>
-                <p>Unidades seleccionadas: ${productoBuscado.unidades}</p>
-                <p>Subtotal: ${productoBuscado.subtotal}</p>
-        `
-    })}
+    let contenedorCarrito = document.getElementById("contenedorCarrito");
+    contenedorCarrito.innerHTML = "";
+    carrito.forEach(productoBuscado => {
+        let productcarr = document.createElement("div");
+        productcarr.className = "productcarr";
+        productcarr.innerHTML = `
+            <p>Producto elegido: ${productoBuscado.nombre}</p>
+            <p>Precio Unitario: ${productoBuscado.precioUnitario}</p>
+            <p>Unidades seleccionadas: ${productoBuscado.unidades}</p>
+            <p>Subtotal: ${productoBuscado.subtotal}</p>
+            <button class="agregarcarr">Borrar 1u.</button>
+            <button class="eliminarcarr">Agregar 1u.</button>
+        `;
+        contenedorCarrito.appendChild(productcarr);
+        productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false));
+        productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true));
+    });
+}
 
+function modificarCantidad(idProducto, agregar) {
+    let carrito = obtenerCarrito();
+    let productoEnCarrito = carrito.find(producto => producto.id === idProducto);
 
-
-    let input = document.getElementById("buscador")
-    let botonbuscar = document.getElementById("buscar")
-
-    botonbuscar.addEventListener("click",() => filtrarPorNombre(losProductos, input.value))
-
-    function filtrarPorNombre(productos, valor) {
-        let valorStr = valor.toString();
-
-        let productosFiltrados = productos.filter(producto => producto.nombre.includes(valorStr) || producto.precio.toString().includes(valorStr))
-        tarjetaspr(productosFiltrados)
+    if (productoEnCarrito) {
+        if (agregar) {
+            productoEnCarrito.unidades += 1;
+        } else {
+            productoEnCarrito.unidades -= 1;
+            if (productoEnCarrito.unidades <= 0) {
+                carrito = carrito.filter(producto => producto.id !== idProducto);
+            }
+        }
+        productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
+        setearCarrito(carrito);
+        renderizarCarrito(carrito);
     }
+}
+
+
+let input = document.getElementById("buscador")
+let botonbuscar = document.getElementById("buscar")
+
+botonbuscar.addEventListener("click", () => filtrarPorNombre(losProductos, input.value))
+
+function filtrarPorNombre(productos, valor) {
+    let valorStr = valor.toString();
+
+    let productosFiltrados = productos.filter(producto => producto.nombre.includes(valorStr) || producto.precio.toString().includes(valorStr))
+    tarjetaspr(productosFiltrados)
+}
 
 
 

@@ -133,6 +133,34 @@
         gap: 10px;
     }
 
+    #productcarr{
+        #agregarcarr{
+            display: inline;
+            position: relative;
+            padding: 15px;
+            bottom: 508px;
+            left: 149px;
+            color: map-get($colores, color3 );
+            @include font(bolder);
+            text-decoration: none;
+            background-color: map-get($colores, color4 );
+        }
+        
+        #eliminarcarr{
+            display: inline;
+            position: relative;
+            padding: 15px;
+            bottom: 508px;
+            left: 149px;
+            color: map-get($colores, color3 );
+            @include font(bolder);
+            text-decoration: none;
+            background-color: map-get($colores, color4 );
+        }
+    }
+
+
+
     #productos{
         display: flex;
         flex-wrap: wrap;
