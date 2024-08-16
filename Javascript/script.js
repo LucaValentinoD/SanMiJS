@@ -3,7 +3,7 @@ let losProductos = [
     { id: 2, nombre: "Iphone 12", categoria: "Model-Old", stock: 4, precio: 750, imagen: "iphone12.png" },
     { id: 3, nombre: "Iphone 13", categoria: "Model-Old", stock: 2, precio: 800, imagen: "Iphone13.png" },
     { id: 4, nombre: "Iphone 14", categoria: "Model-Normal", stock: 1, precio: 950, imagen: "Iphone14.png" },
-    { id: 5, nombre: "Iphone 14 Pro", categoria: "Model-Normal", stock: 5, precio: 1100, imagen: "Iphone14St.png" },
+    { id: 5, nombre: "Iphone 14 Pro", categoria: "Model-Normal", stock: 5, precio: 1100, imagen: "Iphone14Pro.png" },
     { id: 6, nombre: "Iphone 15", categoria: "Model-New", stock: 8, precio: 1500, imagen: "Iphone15.png" },
     { id: 7, nombre: "Iphone 15 Pro", categoria: "Model-New", stock: 8, precio: 1800, imagen: "Iphone15prob.png" }]
 
