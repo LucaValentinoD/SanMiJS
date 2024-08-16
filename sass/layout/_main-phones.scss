@@ -50,7 +50,7 @@
         position: relative;
         padding: 15px;
         bottom: 508px;
-        left: 149px;
+        left: 150px;
         color: map-get($colores, color3 );
         @include font(bolder);
         text-decoration: none;
@@ -119,6 +119,17 @@
         pointer-events: none;
         z-index: 10;
     }
+    #finalizarCompra{
+        display: none;
+        position: relative;
+        padding: 15px;
+        bottom: 566px;
+        left: 269px;
+        color: map-get($colores, color3 );
+        @include font(bolder);
+        text-decoration: none;
+        background-color: map-get($colores, color4 );
+    }
     #x{
         display: none;
     }
@@ -133,34 +144,27 @@
         gap: 10px;
     }
 
-    #productcarr{
-        #agregarcarr{
-            display: inline;
-            position: relative;
-            padding: 15px;
-            bottom: 508px;
-            left: 149px;
+    .productcarr{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .productcarr div{
+        .agregarcarr{
             color: map-get($colores, color3 );
-            @include font(bolder);
+            @include font(32px);
             text-decoration: none;
             background-color: map-get($colores, color4 );
         }
         
-        #eliminarcarr{
-            display: inline;
-            position: relative;
-            padding: 15px;
-            bottom: 508px;
-            left: 149px;
+        .eliminarcarr{
             color: map-get($colores, color3 );
-            @include font(bolder);
+            @include font(32px);
             text-decoration: none;
             background-color: map-get($colores, color4 );
         }
     }
-
-
-
     #productos{
         display: flex;
         flex-wrap: wrap;
