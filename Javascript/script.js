@@ -149,7 +149,16 @@ function mostrarEsconder3() {
 }
 
 
-
+function mostrarAlert(title, text, icon, confirmButtonText, timer, showConfirmButton){
+    Swal.fire({
+        title,
+        text,
+        icon,
+        confirmButtonText,
+        timer,
+        showConfirmButton
+    })
+}
 
 
 
@@ -161,8 +170,13 @@ function agregarAlCarrito(e, productos) {
     let productoEnCarrito = carrito.find(producto => producto.id === idProducto);
 
     if (productoEnCarrito) {
-        productoEnCarrito.unidades += 1;
-        productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
+        if(productoBuscado.stock > productoEnCarrito.unidades){
+            productoEnCarrito.unidades += 1;
+            productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
+            mostrarAlert('Agregaste al Carrito','','success','','1000',)
+        } else{
+            mostrarAlert('Ya no hay unidades.','','error','','1000',)
+        }
     } else {
         carrito.push({
             imagen: productoBuscado.imagen,
@@ -172,10 +186,11 @@ function agregarAlCarrito(e, productos) {
             unidades: 1,
             subtotal: productoBuscado.precio
         });
+        mostrarAlert('Agregaste al Carrito','','success','','1000',)
     }
     setearCarrito(carrito);
     renderizarCarrito(carrito);
-    console.log("Carrito después de añadir:", carrito);
+    console.log(productoEnCarrito.stock);
 }
 
 function renderizarCarrito(carrito) {
@@ -203,10 +218,16 @@ function renderizarCarrito(carrito) {
 function modificarCantidad(idProducto, agregar) {
     let carrito = obtenerCarrito();
     let productoEnCarrito = carrito.find(producto => producto.id === idProducto);
+    let productoBuscado = losProductos.find(producto => producto.id === idProducto);
 
     if (productoEnCarrito) {
         if (agregar) {
-            productoEnCarrito.unidades += 1;
+            if(productoBuscado.stock > productoEnCarrito.unidades){
+                productoEnCarrito.unidades += 1;
+                mostrarAlert('Agregaste al Carrito','','success','','1000',)
+            } else{
+                mostrarAlert('Ya no hay unidades.','','error','','1000',)
+            }
         } else {
             productoEnCarrito.unidades -= 1;
             if (productoEnCarrito.unidades <= 0) {
