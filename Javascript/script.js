@@ -68,10 +68,10 @@ finalizarCompra.addEventListener("click", finalizar)
 function finalizar(){
     let carrito = obtenerCarrito()
     if(carrito.length === 0){
-        alert("Tu carrito está vacío.")
+        mostrarAlert('Tu carrito está vacío.','','error','1000',)
     }else{
         let total = carrito.reduce((acumulador, producto) => acumulador + producto.subtotal, 0);
-    alert("                                   Gracias por la Compra!!!\n                                        el total seria: " + total + "\n                      Cualquier cosa contactarse con nosotros.")
+        mostrarAlert('Gracias por la Compra!!!','El total seria: '  + total +' usd, Cualquier cosa contactarse con nosotros.','success','','6900',)
     localStorage.removeItem("carrito")
     renderizarCarrito([])}
 
@@ -224,14 +224,18 @@ function modificarCantidad(idProducto, agregar) {
         if (agregar) {
             if(productoBuscado.stock > productoEnCarrito.unidades){
                 productoEnCarrito.unidades += 1;
-                mostrarAlert('Agregaste al Carrito','','success','','1000',)
+                mostrarAlert('Ahora tienes ' + productoEnCarrito.unidades + ' unidades.','','success','','1000',)
             } else{
                 mostrarAlert('Ya no hay unidades.','','error','','1000',)
             }
         } else {
             productoEnCarrito.unidades -= 1;
+
             if (productoEnCarrito.unidades <= 0) {
                 carrito = carrito.filter(producto => producto.id !== idProducto);
+                mostrarAlert('Eliminaste del carrito.','','success','','1000',)
+            }else{
+                    mostrarAlert('Eliminaste una unidad.','','success','','1000',)
             }
         }
         productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
