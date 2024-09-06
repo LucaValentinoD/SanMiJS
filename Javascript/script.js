@@ -160,6 +160,25 @@ function mostrarAlert(title, text, icon, confirmButtonText, timer, showConfirmBu
     })
 }
 
+function mostrarAlert2(icon, title){
+    const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+    }
+});
+Toast.fire({
+    icon: icon,
+    title: title
+});
+}
+
+
 
 
 function agregarAlCarrito(e, productos) {
@@ -224,9 +243,9 @@ function modificarCantidad(idProducto, agregar) {
         if (agregar) {
             if(productoBuscado.stock > productoEnCarrito.unidades){
                 productoEnCarrito.unidades += 1;
-                mostrarAlert('Ahora tienes ' + productoEnCarrito.unidades + ' unidades.','','success','','1000',)
+                mostrarAlert2('success','Ahora tienes ' + productoEnCarrito.unidades + ' unidades.')
             } else{
-                mostrarAlert('Ya no hay unidades.','','error','','1000',)
+                mostrarAlert2('error','Ya no hay unidades.')
             }
         } else {
             productoEnCarrito.unidades -= 1;
@@ -235,7 +254,7 @@ function modificarCantidad(idProducto, agregar) {
                 carrito = carrito.filter(producto => producto.id !== idProducto);
                 mostrarAlert('Eliminaste del carrito.','','success','','1000',)
             }else{
-                    mostrarAlert('Eliminaste una unidad.','','success','','1000',)
+                mostrarAlert2('success','Eliminaste una unidad.')
             }
         }
         productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
