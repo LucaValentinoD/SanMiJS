@@ -178,7 +178,18 @@ Toast.fire({
 });
 }
 
-
+function tostadora(text){
+Toastify({
+  text,
+  duration: 3000,
+  gravity: "top", // `top` or `bottom`
+  position: "right", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  className:"info",
+  style: {
+    background: "linear-gradient(to right, #4F1787, #180161)",
+  },
+}).showToast();}
 
 
 function agregarAlCarrito(e, productos) {
@@ -192,9 +203,9 @@ function agregarAlCarrito(e, productos) {
         if(productoBuscado.stock > productoEnCarrito.unidades){
             productoEnCarrito.unidades += 1;
             productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
-            mostrarAlert('Agregaste al Carrito','','success','','1000',)
+            tostadora('Agregaste al Carrito')
         } else{
-            mostrarAlert('Ya no hay unidades.','','error','','1000',)
+            tostadora('Ya no hay unidades')
         }
     } else {
         carrito.push({
@@ -205,7 +216,7 @@ function agregarAlCarrito(e, productos) {
             unidades: 1,
             subtotal: productoBuscado.precio
         });
-        mostrarAlert('Agregaste al Carrito','','success','','1000',)
+        tostadora('Agregaste al Carrito')
     }
     setearCarrito(carrito);
     renderizarCarrito(carrito);
@@ -275,6 +286,8 @@ function filtrarPorNombre(productos, valor) {
     let productosFiltrados = productos.filter(producto => producto.nombre.includes(valorStr) || producto.precio.toString().includes(valorStr))
     tarjetaspr(productosFiltrados)
 }
+
+
 
 
 
