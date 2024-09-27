@@ -229,19 +229,19 @@ fetch("../info.json")
         carrito.forEach(productoBuscado => {
             let productcarr = document.createElement("div");
             productcarr.className = "productcarr";
-            productcarr.innerHTML = `
-                <h3>${productoBuscado.nombre}</h3>
+            productcarr.innerHTML = 
+                `<h3>${productoBuscado.nombre}</h3>
                 <p>$${productoBuscado.precioUnitario}</p>
                 <p>Cantidad: ${productoBuscado.unidades}</p>
                 <button class="agregarcarr">+</button>
-                <button class="eliminarcarr">-</button>
-            `;
+                <button class="eliminarcarr">-</button>`;
     
             contenedorCarrito.appendChild(productcarr);
             productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true, productos));
             productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false, productos));        
         });
     }
+    
     
     
     
