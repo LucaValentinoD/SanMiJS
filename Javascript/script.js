@@ -1,8 +1,8 @@
 fetch("/info.json")
     .then(response => response.json())
     .then(productos => principal(productos))
+    .catch(error => console.log(error))
 
-    
 function principal(productos) {
     tarjetaspr(productos)
     let carrito = obtenerCarrito()
