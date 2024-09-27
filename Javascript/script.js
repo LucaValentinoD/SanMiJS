@@ -6,7 +6,7 @@ fetch("/info.json")
 function principal(productos) {
     tarjetaspr(productos)
     let carrito = obtenerCarrito()
-    renderizarCarrito(carrito, productos);
+    renderizarCarrito(carrito)
 }
 
 function obtenerCarrito() {
@@ -23,7 +23,6 @@ function setearCarrito(carrito) {
 }
 
 function tarjetaspr(productos) {
-    console.log(productos)
     let contenedorProductos = document.getElementById("productos")
     contenedorProductos.innerHTML = ""
     productos.forEach(producto => {
@@ -214,11 +213,11 @@ function agregarAlCarrito(e, productos) {
         tostadora('Agregaste al Carrito')
     }
     setearCarrito(carrito);
-    renderizarCarrito(carrito, productos);    
+    renderizarCarrito(carrito);
     console.log(productoEnCarrito.stock);
 }
 
-function renderizarCarrito(carrito, productos) {
+function renderizarCarrito(carrito) {
     let contenedorCarrito = document.getElementById("contenedorCarrito");
     contenedorCarrito.innerHTML = "";
     carrito.forEach(productoBuscado => {
@@ -235,16 +234,15 @@ function renderizarCarrito(carrito, productos) {
             </div>
         `;
         contenedorCarrito.appendChild(productcarr);
-        productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false, productos));
-        productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true, productos));        
+        productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false));
+        productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true));
     });
 }
 
-
-function modificarCantidad(idProducto, agregar, productos) {
+function modificarCantidad(idProducto, agregar) {
     let carrito = obtenerCarrito();
     let productoEnCarrito = carrito.find(producto => producto.id === idProducto);
-    let productoBuscado = productos.find(producto => producto.id === idProducto);
+    let productoBuscado = losProductos.find(producto => producto.id === idProducto);
 
     if (productoEnCarrito) {
         if (agregar) {
@@ -266,16 +264,15 @@ function modificarCantidad(idProducto, agregar, productos) {
         }
         productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
         setearCarrito(carrito);
-        renderizarCarrito(carrito, productos);        
+        renderizarCarrito(carrito);
     }
 }
-
 
 
 let input = document.getElementById("buscador")
 let botonbuscar = document.getElementById("buscar")
 
-botonbuscar.addEventListener("click", () => filtrarPorNombre(productos, input.value))
+botonbuscar.addEventListener("click", () => filtrarPorNombre(losProductos, input.value))
 
 function filtrarPorNombre(productos, valor) {
     let valorStr = valor.toString();
@@ -283,6 +280,4 @@ function filtrarPorNombre(productos, valor) {
     let productosFiltrados = productos.filter(producto => producto.nombre.includes(valorStr) || producto.precio.toString().includes(valorStr))
     tarjetaspr(productosFiltrados)
 }
-
-
 
