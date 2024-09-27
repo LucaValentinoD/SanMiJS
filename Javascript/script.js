@@ -4,10 +4,10 @@ fetch("../info.json")
     .catch(error => console.log(error));
 
     function principal(productos) {
-        tarjetaspr(productos)
-        let carrito = obtenerCarrito()
+        tarjetaspr(productos);
+        let carrito = obtenerCarrito();
         renderizarCarrito(carrito, productos);
-    }
+    }    
     
     function obtenerCarrito() {
         let carrito = []
@@ -220,22 +220,25 @@ fetch("../info.json")
     function renderizarCarrito(carrito, productos) {
         let contenedorCarrito = document.getElementById("contenedorCarrito");
         contenedorCarrito.innerHTML = "";
+        
         carrito.forEach(productoBuscado => {
             let productcarr = document.createElement("div");
             productcarr.className = "productcarr";
-            tarjetaProducto.innerHTML = `
-            <h3>${producto.nombre}</h3>
-            <img src="../assets/${producto.imagen}" alt="${producto.nombre}">
-            <p>$${producto.precio}</p>
-            <p>Quedan ${producto.stock} u.</p>
-            <button id="${producto.id}">Añadir al carrito</button>
-        `;
-
+            productcarr.innerHTML = `
+                <h3>${productoBuscado.nombre}</h3>
+                <img src="../assets/${productoBuscado.imagen}" alt="${productoBuscado.nombre}">
+                <p>$${productoBuscado.precioUnitario}</p>
+                <p>Cantidad: ${productoBuscado.unidades}</p>
+                <button class="agregarcarr">+</button>
+                <button class="eliminarcarr">-</button>
+            `;
+    
             contenedorCarrito.appendChild(productcarr);
-            productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false, productos));
-            productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true, productos));        
+            productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true, productos));
+            productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false, productos));        
         });
     }
+    
     
     
     function modificarCantidad(idProducto, agregar, productos) {
