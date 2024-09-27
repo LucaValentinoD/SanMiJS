@@ -1,6 +1,8 @@
 fetch("/info.json")
     .then(response => response.json())
     .then(productos => principal(productos))
+
+    
 function principal(productos) {
     tarjetaspr(productos)
     let carrito = obtenerCarrito()
