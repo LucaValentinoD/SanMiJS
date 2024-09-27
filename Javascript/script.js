@@ -209,7 +209,6 @@ fetch("../info.json")
             }
         } else {
             carrito.push({
-                imagen: productoBuscado.imagen,
                 id: productoBuscado.id,
                 nombre: productoBuscado.nombre,
                 precioUnitario: productoBuscado.precio,
