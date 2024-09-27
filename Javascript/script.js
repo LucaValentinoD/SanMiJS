@@ -191,9 +191,14 @@ fetch("../info.json")
         let carrito = obtenerCarrito();
         let idProducto = Number(e.target.id);
         let productoBuscado = productos.find(producto => producto.id === idProducto);
-        
+    
+        if (!productoBuscado) {
+            console.error("Producto no encontrado");
+            return;
+        }
+    
         let productoEnCarrito = carrito.find(producto => producto.id === idProducto);
-        
+    
         if (productoEnCarrito) {
             if (productoBuscado.stock > productoEnCarrito.unidades) {
                 productoEnCarrito.unidades += 1;
@@ -214,8 +219,9 @@ fetch("../info.json")
             tostadora('Agregaste al Carrito');
         }
         setearCarrito(carrito);
-        renderizarCarrito(carrito, productos);    
+        renderizarCarrito(carrito, productos);
     }
+    
     
     function renderizarCarrito(carrito, productos) {
         let contenedorCarrito = document.getElementById("contenedorCarrito");
