@@ -1,7 +1,12 @@
 fetch("./info.json")
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(productos => principal(productos))
-    .catch(error => console.log(error))
+    .catch(error => console.error("Error al cargar el archivo JSON:", error));
 
 function principal(productos) {
     tarjetaspr(productos)
