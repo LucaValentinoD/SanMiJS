@@ -232,7 +232,6 @@ fetch("../info.json")
             productcarr.className = "productcarr";
             productcarr.innerHTML = `
                 <h3>${productoBuscado.nombre}</h3>
-                <img src="../assets/${productoBuscado.imagen}" alt="${productoBuscado.nombre}">
                 <p>$${productoBuscado.precioUnitario}</p>
                 <p>Cantidad: ${productoBuscado.unidades}</p>
                 <button class="agregarcarr">+</button>
