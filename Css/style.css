@@ -484,6 +484,9 @@ main {
   left: 29px;
   gap: 10px; }
 
+.main5 .info {
+  font-family: 'Inter', Times, serif; }
+
 .main5 .productcarr {
   display: flex;
   flex-direction: column;

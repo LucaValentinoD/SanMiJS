@@ -1,18 +1,12 @@
-let losProductos = [
-    { id: 1, nombre: "Iphone 11", categoria: "Model-Old", stock: 2, precio: 700, imagen: "iphone11b.png" },
-    { id: 2, nombre: "Iphone 12", categoria: "Model-Old", stock: 4, precio: 750, imagen: "iphone12.png" },
-    { id: 3, nombre: "Iphone 13", categoria: "Model-Old", stock: 2, precio: 800, imagen: "Iphone13.png" },
-    { id: 4, nombre: "Iphone 14", categoria: "Model-Normal", stock: 1, precio: 950, imagen: "Iphone14.png" },
-    { id: 5, nombre: "Iphone 14 Pro", categoria: "Model-Normal", stock: 5, precio: 1100, imagen: "Iphone14Pro.png" },
-    { id: 6, nombre: "Iphone 15", categoria: "Model-New", stock: 8, precio: 1500, imagen: "Iphone15.png" },
-    { id: 7, nombre: "Iphone 15 Pro", categoria: "Model-New", stock: 8, precio: 1800, imagen: "Iphone15prob.png" }]
-
-principal(losProductos)
+fetch("/info.json")
+    .then(response => response.json())
+    .then(productos => principal(productos))
+    .catch(error => console.log(error))
 
 function principal(productos) {
     tarjetaspr(productos)
     let carrito = obtenerCarrito()
-    renderizarCarrito(carrito)
+    renderizarCarrito(carrito, productos);
 }
 
 function obtenerCarrito() {
@@ -29,6 +23,7 @@ function setearCarrito(carrito) {
 }
 
 function tarjetaspr(productos) {
+    console.log(productos)
     let contenedorProductos = document.getElementById("productos")
     contenedorProductos.innerHTML = ""
     productos.forEach(producto => {
@@ -219,11 +214,11 @@ function agregarAlCarrito(e, productos) {
         tostadora('Agregaste al Carrito')
     }
     setearCarrito(carrito);
-    renderizarCarrito(carrito);
+    renderizarCarrito(carrito, productos);    
     console.log(productoEnCarrito.stock);
 }
 
-function renderizarCarrito(carrito) {
+function renderizarCarrito(carrito, productos) {
     let contenedorCarrito = document.getElementById("contenedorCarrito");
     contenedorCarrito.innerHTML = "";
     carrito.forEach(productoBuscado => {
@@ -240,15 +235,16 @@ function renderizarCarrito(carrito) {
             </div>
         `;
         contenedorCarrito.appendChild(productcarr);
-        productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false));
-        productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true));
+        productcarr.querySelector(".agregarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, false, productos));
+        productcarr.querySelector(".eliminarcarr").addEventListener("click", () => modificarCantidad(productoBuscado.id, true, productos));        
     });
 }
 
-function modificarCantidad(idProducto, agregar) {
+
+function modificarCantidad(idProducto, agregar, productos) {
     let carrito = obtenerCarrito();
     let productoEnCarrito = carrito.find(producto => producto.id === idProducto);
-    let productoBuscado = losProductos.find(producto => producto.id === idProducto);
+    let productoBuscado = productos.find(producto => producto.id === idProducto);
 
     if (productoEnCarrito) {
         if (agregar) {
@@ -270,15 +266,16 @@ function modificarCantidad(idProducto, agregar) {
         }
         productoEnCarrito.subtotal = productoEnCarrito.precioUnitario * productoEnCarrito.unidades;
         setearCarrito(carrito);
-        renderizarCarrito(carrito);
+        renderizarCarrito(carrito, productos);        
     }
 }
+
 
 
 let input = document.getElementById("buscador")
 let botonbuscar = document.getElementById("buscar")
 
-botonbuscar.addEventListener("click", () => filtrarPorNombre(losProductos, input.value))
+botonbuscar.addEventListener("click", () => filtrarPorNombre(productos, input.value))
 
 function filtrarPorNombre(productos, valor) {
     let valorStr = valor.toString();
@@ -286,8 +283,6 @@ function filtrarPorNombre(productos, valor) {
     let productosFiltrados = productos.filter(producto => producto.nombre.includes(valorStr) || producto.precio.toString().includes(valorStr))
     tarjetaspr(productosFiltrados)
 }
-
-
 
 
 
